@@ -1,15 +1,17 @@
 .navbar{
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
     height: 4rem;
     display: flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 1);
+    justify-content: space-between;
+    padding: 0 1rem;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border-radius: 0 0 10px 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     z-index: 10;
@@ -21,4 +23,22 @@
     margin-left: 1rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+}
+
+.navLinks {
+    margin-right: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.navLink {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+    font-weight: bolder;
+}
+
+.navLink:hover {
+    color: #7484e6;
 }
