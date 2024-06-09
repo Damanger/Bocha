@@ -1,12 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from './components/home';
+import Navbar from './components/navbar';
 import Error404 from './components/error404';
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Error404 />} />
