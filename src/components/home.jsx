@@ -38,7 +38,7 @@ const home = () => {
             <section data-src="https://images.pexels.com/photos/992734/pexels-photo-992734.jpeg?auto=compress&cs=tinysrgb&w=4608&h=3072&dpr=1">
                 <h1 className={Style.titulo}>BO·CHA</h1>
             </section>
-            <section data-src="https://images.pexels.com/photos/6412841/pexels-photo-6412841.jpeg?auto=compress&cs=tinysrgb&w=3839&h=5759&dpr=1">
+            <section data-src="https://images.pexels.com/photos/7535456/pexels-photo-7535456.jpeg?auto=compress&cs=tinysrgb&w=2266&h=3393&dpr=1">
                 <h1 className={Style.titulo}></h1>
             </section>
             <section data-src="https://images.pexels.com/photos/6412836/pexels-photo-6412836.jpeg?auto=compress&cs=tinysrgb&w=3578&h=5367&dpr=1">
