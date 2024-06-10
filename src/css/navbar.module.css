@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border-radius: 0 0 10px 10px;
@@ -40,5 +40,12 @@
 }
 
 .navLink:hover {
-    color: #7484e6;
+    text-underline-offset: 0.5rem;
+    text-decoration: underline 0.2rem solid rgb(172, 182, 249);
+}
+
+@media screen and (max-width: 1024px){
+    .navLink:hover{
+        color: white;
+    }
 }

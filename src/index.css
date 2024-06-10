@@ -5,7 +5,11 @@ body {
   place-items: center;
   width: 100%;
   height: 100%;
-  overflow-x: hidden !important;
+  overflow-x: hidden;
+}
+
+body.scrollable {
+  overflow-y: auto;
 }
 
 section{
@@ -17,10 +21,9 @@ section{
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-x: hidden !important;
 }
 
-section:first-of-type {
+section:first-of-type(1) {
   background-image: url('https://images.pexels.com/photos/6412836/pexels-photo-6412836.jpeg?auto=compress&cs=tinysrgb&w=3578&h=5367&dpr=1');
 }
 
@@ -28,13 +31,14 @@ section:nth-of-type(2) {
   background-image: url('https://images.pexels.com/photos/7535456/pexels-photo-7535456.jpeg?auto=compress&cs=tinysrgb&w=2266&h=3393&dpr=1');
 }
 
-section:last-of-type {
+section:nth-of-type(3) {
   background-image: url('https://images.pexels.com/photos/992734/pexels-photo-992734.jpeg?auto=compress&cs=tinysrgb&w=4608&h=3072&dpr=1');
 }
 
 ::-webkit-scrollbar{
   width: 0.25rem;
   height: 0.25rem;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb{
