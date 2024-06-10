@@ -5,12 +5,13 @@ import 'leaflet/dist/leaflet.css';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Style from '../css/mapa.module.css';
-import yah from '../assets/yah.webp'; // Importa la imagen del ícono de usuario
+import yah from '../assets/yah.webp';
+import pin from '../assets/placeholder.webp';
 
 const Mapa = () => {
     const mapRef = useRef(null);
     const [buttonVisible, setButtonVisible] = useState(true);
-    const [userMarker, setUserMarker] = useState(null); // Estado para almacenar el marcador del usuario
+    const [userMarker, setUserMarker] = useState(null);
 
     // Coordenadas y texto del marcador
     const latitude = 17.806340;
@@ -36,8 +37,16 @@ const Mapa = () => {
                     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 }).addTo(map);
 
-                // Añadir el marcador en las coordenadas especificadas con el texto del marcador
-                L.marker([latitude, longitude]).addTo(map)
+                // Crear un nuevo ícono para el marcador inicial
+                const initialIcon = L.icon({
+                    iconUrl: pin,
+                    iconSize: [32, 32], // Puedes ajustar el tamaño del ícono aquí
+                    iconAnchor: [16, 32], // El punto del ícono que se corresponderá con la coordenada
+                    popupAnchor: [0, -32] // Punto desde donde se abrirá el popup respecto al icono
+                });
+
+                // Añadir el marcador inicial en las coordenadas especificadas con el texto del marcador y el ícono personalizado
+                L.marker([latitude, longitude], { icon: initialIcon }).addTo(map)
                     .bindPopup(markerText)
                     .openPopup();
             }
@@ -96,7 +105,7 @@ const Mapa = () => {
             }).on('routesfound', function (e) {
                 var routes = e.routes;
                 var summary = routes[0].summary;
-                toast.success('Ruta encontrada: ' + summary.totalDistance + ' metros en ' + summary.totalTime + ' segundos');
+                toast.success('Ruta encontrada: Recorrido de ' + summary.totalDistance + ' metros en un tiempo de ' + summary.totalTime + ' segundos');
             }).addTo(mapRef.current);
 
             // Aplicar estilos personalizados al panel de instrucciones
@@ -107,6 +116,8 @@ const Mapa = () => {
 
             // Ocultar el botón después de hacer clic en él
             setButtonVisible(false);
+        }, (error) => {
+            toast.error('Error al obtener la ubicación: ' + error.message);
         });
     };
 
