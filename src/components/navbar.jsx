@@ -9,11 +9,11 @@ const navbar = () => {
 
     useEffect(() => {
         if (location.pathname === "/") {
-            setActiveStyle({ borderBottom: "0.2rem solid #de7fb6", paddingBottom: "0.25rem"});
+            setActiveStyle({ borderBottom: "0.2rem solid rgb(172, 182, 249)", paddingBottom: "0.25rem"});
         } else if (location.pathname === "/menu") {
-            setActiveStyle({ borderBottom: "0.2rem solid #de7fb6", paddingBottom: "0.25rem" });
+            setActiveStyle({ borderBottom: "0.2rem solid rgb(172, 182, 249)", paddingBottom: "0.25rem" });
         } else if (location.pathname === "/ubicacion") {
-            setActiveStyle({ borderBottom: "0.2rem solid #de7fb6", paddingBottom: "0.25rem" });
+            setActiveStyle({ borderBottom: "0.2rem solid rgb(172, 182, 249)", paddingBottom: "0.25rem" });
         } else {
             setActiveStyle({});
         }

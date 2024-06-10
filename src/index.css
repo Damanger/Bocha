@@ -39,6 +39,6 @@ section:nth-of-type(3) {
 }
 
 ::-webkit-scrollbar-thumb{
-  background: linear-gradient(transparent, #de7fb6);
+  background: linear-gradient(transparent, rgb(172, 182, 249));
   border-radius: 0.25rem;
 }
