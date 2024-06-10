@@ -2,7 +2,6 @@
     background-image: url('https://images.pexels.com/photos/6412837/pexels-photo-6412837.jpeg?auto=compress&cs=tinysrgb&w=3839&h=5759&dpr=1');
     display: flex;
     flex-direction: column;
-    opacity: 0.8;
 }
 
 .contenedorTitulo{

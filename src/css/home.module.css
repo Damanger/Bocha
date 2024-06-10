@@ -1,13 +1,13 @@
-.titulo{
-    margin:auto;
-    color:rgb(255,255,255);
+.titulo {
+    margin: auto;
+    color: rgb(255, 255, 255);
     font-size: 10rem;
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
     text-align: center;
 }
 
-@media screen and (max-width: 768px){
-    .titulo{
+@media screen and (max-width: 768px) {
+    .titulo {
         font-size: 5rem;
     }
 }

@@ -8,10 +8,6 @@ body {
   overflow-x: hidden;
 }
 
-body.scrollable {
-  overflow-y: auto;
-}
-
 section{
   height: 100vh;
   width: 100vw;
@@ -21,6 +17,7 @@ section{
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0.8;
 }
 
 section:first-of-type(1) {
