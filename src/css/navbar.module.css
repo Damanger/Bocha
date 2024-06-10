@@ -41,7 +41,12 @@
 
 .navLink:hover {
     text-underline-offset: 0.5rem;
-    text-decoration: underline 0.2rem solid rgb(172, 182, 249);
+    text-decoration: underline;
+    text-decoration-thickness: 0.2rem;
+    -webkit-text-decoration: underline;
+    text-decoration-color: rgb(172, 182, 249) solid;
+    -webkit-text-decoration-thickness: 0.2rem;
+    -webkit-text-decoration-color: rgb(172, 182, 249);
 }
 
 @media screen and (max-width: 1024px){
