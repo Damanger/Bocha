@@ -26,7 +26,7 @@ const navbar = () => {
     return (
         <nav className={Style.navbar}>
             <Link to="/" activeclassname="activo">
-                <img src="https://raw.githubusercontent.com/Damanger/Bocha/main/public/bocha.webp?token=GHSAT0AAAAAACPKJ6JKORKJNCI6AJSWPTZEZTGOKRQ" alt="BO·CHA" className={Style.imgLogo} />
+                <img src="./bocha.webp" alt="BO·CHA" className={Style.imgLogo} />
             </Link>
             <div className={Style.navLinks}>
                 <Link to="/" activeclassname="activo" className={Style.navLink} style={location.pathname === "/" ? activeStyle : {}} onClick={closeMenu}>Inicio</Link>
