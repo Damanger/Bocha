@@ -39,18 +39,55 @@
     font-weight: bolder;
 }
 
-.navLink:hover {
-    text-underline-offset: 0.5rem;
-    text-decoration: underline;
-    text-decoration-thickness: 0.2rem;
-    -webkit-text-decoration: underline;
-    text-decoration-color: rgb(172, 182, 249) solid;
-    -webkit-text-decoration-thickness: 0.2rem;
-    -webkit-text-decoration-color: rgb(172, 182, 249);
+.navLink:hover, .homeIcon:hover{
+    color: rgb(172, 182, 249);
+}
+
+.hamburgerMenu{
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: #fff;
 }
 
 @media screen and (max-width: 1024px){
     .navLink:hover{
         color: white;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .hamburgerMenu {
+        display: block;
+        font-size: 2rem;
+        color: #fff;
+    }
+    .navLinks{
+        width: 100%;
+    }
+    .showMenu {
+        display: flex;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        width: 100%;
+    }
+    .showMenu a {
+        color: #fff;
+        padding: 1rem;
+        display: block;
+        text-align: center;
+        margin-bottom: 0.25rem;
+    }
+    .navLink {
+        display: none;
     }
 }
