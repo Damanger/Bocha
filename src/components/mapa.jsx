@@ -105,7 +105,7 @@ const Mapa = () => {
             }).on('routesfound', function (e) {
                 var routes = e.routes;
                 var summary = routes[0].summary;
-                toast.success('Ruta encontrada: Recorrido de ' + summary.totalDistance + ' metros en un tiempo de ' + summary.totalTime + ' segundos');
+                toast.success('Ruta encontrada: Recorrido de ' + summary.totalDistance + ' metros en un tiempo de ' + summary.totalTime + ' segundos aproximadamente');
             }).addTo(mapRef.current);
 
             // Aplicar estilos personalizados al panel de instrucciones

@@ -1,0 +1,23 @@
+.footerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.socialIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialIcons > * {
+    margin-right: 10px;
+}
+
+.contentContainer p {
+    margin: 0;
+    color: black !important;
+}
