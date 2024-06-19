@@ -14,7 +14,7 @@
 
 .titulo{
     color: aliceblue;
-    margin-top: 5rem;
+    margin-top: -3rem;
     margin-bottom: 1rem;
     font-size: 6rem;
 }
@@ -67,7 +67,14 @@
 
 @media screen and (max-width: 430px){
     .titulo{
-        font-size: 4rem;
+        font-size: 3rem;
+        margin-top: -1rem;
+        margin-bottom: 1rem;
     }
-    
+}
+
+@media screen and (max-width: 375px){
+    .titulo{
+        font-size: 2rem;
+    }
 }

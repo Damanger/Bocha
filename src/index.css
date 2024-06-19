@@ -1,3 +1,7 @@
+html{
+  scroll-snap-type: y mandatory;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -18,6 +22,7 @@ section{
   align-items: center;
   justify-content: center;
   opacity: 0.8;
+  scroll-snap-align: start;
 }
 
 section:first-of-type(1) {
@@ -33,8 +38,8 @@ section:nth-of-type(3) {
 }
 
 ::-webkit-scrollbar{
-  width: 0.25rem;
-  height: 0.25rem;
+  width: 0;
+  height: 0;
   background: transparent;
 }
 

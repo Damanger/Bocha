@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
+import Navbar from './navbar';
+import Footer from './footer';
 import L from 'leaflet';
 import 'leaflet-routing-machine';
 import 'leaflet/dist/leaflet.css';
@@ -105,7 +107,9 @@ const Mapa = () => {
             }).on('routesfound', function (e) {
                 var routes = e.routes;
                 var summary = routes[0].summary;
-                toast.success('Ruta encontrada: Recorrido de ' + summary.totalDistance + ' metros en un tiempo de ' + summary.totalTime + ' segundos aproximadamente');
+                // Convertir el tiempo de segundos a minutos
+                var totalTimeInMinutes = (summary.totalTime / 60).toFixed(2);
+                toast.success('Ruta encontrada: Recorrido de ' + summary.totalDistance + ' metros en un tiempo de ' + totalTimeInMinutes + ' minutos aproximadamente');
             }).addTo(mapRef.current);
 
             // Aplicar estilos personalizados al panel de instrucciones
@@ -122,15 +126,19 @@ const Mapa = () => {
     };
 
     return (
-        <section className={Style.fondoMapa} data-src="https://images.pexels.com/photos/6412837/pexels-photo-6412837.jpeg?auto=compress&cs=tinysrgb&w=3839&h=5759&dpr=1">
-            <div className={Style.contenedorTitulo}>
-                <h1 className={Style.titulo}>BO·CHA Huajuapan</h1>
-            </div>
-            <div id="mi_mapa" style={{ width: '90%', height: '31rem', border: 'solid 2px #de7fb6', borderRadius:'10px' }}></div>
-            <div style={{ textAlign: 'center', marginTop: '1rem' }}>
-                {buttonVisible && <button onClick={handleShareLocationClick} className={Style.botonMapa}>¿Cómo llegar? →</button>}
-            </div>
-        </section>
+        <>
+            <Navbar />
+            <section className={Style.fondoMapa} data-src="https://images.pexels.com/photos/6412837/pexels-photo-6412837.jpeg?auto=compress&cs=tinysrgb&w=3839&h=5759&dpr=1">
+                <div className={Style.contenedorTitulo}>
+                    <h1 className={Style.titulo}>BO·CHA Huajuapan</h1>
+                </div>
+                <div id="mi_mapa" style={{ width: '90%', height: '50%', border: 'solid 2px #de7fb6', borderRadius:'10px' }}></div>
+                <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+                    {buttonVisible && <button onClick={handleShareLocationClick} className={Style.botonMapa}>¿Cómo llegar? →</button>}
+                </div>
+            </section>
+            <Footer />
+        </>
     );
 }
 
