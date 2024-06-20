@@ -122,7 +122,7 @@ const Mapa = () => {
                     distance = `${kilometers} kilómetros`;
                 }
 
-                toast.success(`Ruta encontrada: Recorrido de ${distance} en un tiempo de ${minutes} minutos y ${formattedSeconds} segundos aproximadamente`);
+                toast.success(`Recorrido de ${distance} en un tiempo de ${minutes} minutos y ${formattedSeconds} segundos aproximadamente (en vehículo)`);
             }).addTo(mapRef.current);
 
             // Aplicar estilos personalizados al panel de instrucciones

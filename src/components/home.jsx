@@ -1,11 +1,32 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from './navbar';
 import Footer from './footer';
 import Style from '../css/home.module.css';
 
-const home = () => {
+const Home = () => {
+    const [activeSection, setActiveSection] = useState(0);
+
     useEffect(() => {
         const sections = document.querySelectorAll('section');
+        
+        const handleScroll = () => {
+            sections.forEach((section, index) => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                    setActiveSection(index);
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Initial check
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    useEffect(() => {
         const preloadImage = (img) => {
             const src = img.getAttribute('data-src');
             if (!src) {
@@ -30,6 +51,7 @@ const home = () => {
             });
         }, imgOptions);
 
+        const sections = document.querySelectorAll('section');
         sections.forEach(section => {
             imgObserver.observe(section);
         });
@@ -38,6 +60,11 @@ const home = () => {
     return (
         <>
             <Navbar />
+            <aside className={Style.aqui}>
+                <div className={`${Style.circulo} ${activeSection === 0 ? Style.active : ''}`}></div>
+                <div className={`${Style.circulo} ${activeSection === 1 ? Style.active : ''}`}></div>
+                <div className={`${Style.circulo} ${activeSection === 2 ? Style.active : ''}`}></div>
+            </aside>
             <section data-src="https://images.pexels.com/photos/992734/pexels-photo-992734.jpeg?auto=compress&cs=tinysrgb&w=4608&h=3072&dpr=1">
                 <h1 className={Style.titulo}>BO·CHA</h1>
             </section>
@@ -52,4 +79,4 @@ const home = () => {
     );
 };
 
-export default home;
+export default Home;
