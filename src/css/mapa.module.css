@@ -48,13 +48,13 @@
     --font-color: #7484e6;
     --bg-color: #fff;
     --main-color: #de7fb6;
-    width: 6.5rem;
+    width: 7rem;
     height: 3.5rem;
     border-radius: 5px;
     border: 2px solid var(--main-color);
     background-color: var(--bg-color);
     box-shadow: 4px 4px var(--main-color);
-    font-size: 17px;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--font-color);
     cursor: pointer;
