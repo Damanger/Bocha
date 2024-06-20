@@ -32,7 +32,7 @@ const navbar = () => {
     return (
         <nav className={Style.navbar}>
             <Link to="/" activeclassname="activo" aria-label="Logo">
-                <img src="./bocha.webp" alt="BO·CHA" className={Style.imgLogo} onClick={closeMenu}/>
+                <img src="./bocha.webp" alt="BO·CHA" width="48" height="48" className={Style.imgLogo} onClick={closeMenu}/>
             </Link>
             <div className={Style.hamburgerMenu} onClick={toggleMenu}>
                     <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
