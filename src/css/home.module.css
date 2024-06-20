@@ -1,8 +1,11 @@
 .titulo {
     display: grid;
     place-items: center;
+}
+
+.titulo h1{
     color: rgb(255, 255, 255);
-    font-size: 8rem;
+    font-size: 6rem;
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
     text-align: center;
 }
@@ -37,7 +40,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .titulo {
-        font-size: 5rem;
+    .titulo h1{
+        font-size: 3rem;
     }
 }

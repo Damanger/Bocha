@@ -80,7 +80,9 @@ const Home = () => {
                 ></div>
             </aside>
             <section data-src="https://images.pexels.com/photos/992734/pexels-photo-992734.jpeg?auto=compress&cs=tinysrgb&w=4608&h=3072&dpr=1">
-                <h1 className={Style.titulo}>BO·CHA</h1>
+                <div className={Style.titulo}>
+                    <h1>BO·CHA</h1>
+                </div>
             </section>
             <section data-src="https://images.pexels.com/photos/7535456/pexels-photo-7535456.jpeg?auto=compress&cs=tinysrgb&w=2266&h=3393&dpr=1">
                 <h1 className={Style.titulo}></h1>
