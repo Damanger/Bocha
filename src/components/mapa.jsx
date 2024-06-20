@@ -107,9 +107,22 @@ const Mapa = () => {
             }).on('routesfound', function (e) {
                 var routes = e.routes;
                 var summary = routes[0].summary;
-                // Convertir el tiempo de segundos a minutos
-                var totalTimeInMinutes = (summary.totalTime / 60).toFixed(2);
-                toast.success('Ruta encontrada: Recorrido de ' + summary.totalDistance + ' metros en un tiempo de ' + totalTimeInMinutes + ' minutos aproximadamente');
+
+                // Convertir el tiempo de segundos a minutos y segundos
+                var minutes = Math.floor(summary.totalTime / 60);
+                var seconds = Math.floor(summary.totalTime % 60);
+                var formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
+
+                // Convertir la distancia a kilómetros y metros
+                var distance;
+                if (summary.totalDistance < 1000) {
+                    distance = `${summary.totalDistance} metros`;
+                } else {
+                    var kilometers = (summary.totalDistance / 1000).toFixed(2);
+                    distance = `${kilometers} kilómetros`;
+                }
+
+                toast.success(`Ruta encontrada: Recorrido de ${distance} en un tiempo de ${minutes} minutos y ${formattedSeconds} segundos aproximadamente`);
             }).addTo(mapRef.current);
 
             // Aplicar estilos personalizados al panel de instrucciones

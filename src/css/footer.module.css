@@ -6,19 +6,20 @@
     justify-content: center;
     align-items: center;
     background-color: lightgray;
-    padding: 10px;
 }
 
 .contentContainer {
     display: grid;
     place-items: center;
     text-align: center;
+    margin-bottom: 5px;
 }
 
 .socialIcons {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 5px;
 }
 
 .socialIcons > * {
