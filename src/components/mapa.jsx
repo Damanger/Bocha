@@ -145,8 +145,8 @@ const Mapa = () => {
                 <div className={Style.contenedorTitulo}>
                     <h1 className={Style.titulo}>BO·CHA Huajuapan</h1>
                 </div>
-                <div id="mi_mapa" style={{ width: '90%', height: '50%', border: 'solid 2px #de7fb6', borderRadius:'10px' }}></div>
-                <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+                <div id="mi_mapa" style={{ width: '90%', height: '45vh', border: 'solid 2px #de7fb6', borderRadius:'10px', marginTop: '-8rem' }}></div>
+                <div style={{ textAlign: 'center', marginTop: '-8rem' }}>
                     {buttonVisible && <button onClick={handleShareLocationClick} className={Style.botonMapa}>¿Cómo llegar? →</button>}
                 </div>
             </section>
