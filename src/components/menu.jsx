@@ -4,6 +4,7 @@ import Style from '../css/menu.module.css';
 
 const Menu = () => {
     const [itemIndex, setItemIndex] = useState(4)
+    const [animationClass, setAnimationClass] = useState('fadeInUp');
     const rotationValues = [-80, -60, -40, -20, 0, 20, 40, 60, 80];
     const images = [
         "latte.webp", "latte.webp", "latte.webp", "latte.webp",
@@ -36,6 +37,10 @@ const Menu = () => {
         }, 300);
 
         setItemIndex(index);
+
+        const animations = ['fadeInUp', 'fadeInLeft', 'fadeInZoom', 'fadeInRight', 'fadeInDown'];
+        const randomAnimation = animations[Math.floor(Math.random() * animations.length)];
+        setAnimationClass(randomAnimation);
     };
 
     return (
@@ -47,7 +52,7 @@ const Menu = () => {
             >
                 <div className={Style.circularSlider}>
                     <div className={Style.container}>
-                        <div className={Style.text}>
+                        <div className={`${Style.text} ${Style[animationClass]}`} key={itemIndex}>
                             <h1>{descriptions[itemIndex].split(" - ")[0]}</h1>
                             <p>{descriptions[itemIndex].split(" - ")[1]}</p>
                         </div>
