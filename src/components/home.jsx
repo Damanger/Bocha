@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from './navbar';
-import Footer from './footer';
 import Style from '../css/home.module.css';
 
 const Home = () => {
@@ -19,7 +18,7 @@ const Home = () => {
         };
 
         window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Initial check
+        handleScroll();
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
@@ -57,27 +56,10 @@ const Home = () => {
         });
     }, []);
 
-    const scrollToSection = (index) => {
-        const sections = document.querySelectorAll('section');
-        sections[index].scrollIntoView({ behavior: 'smooth' });
-    };
-
     return (
         <>
             <Navbar />
             <aside className={Style.aqui}>
-                <div 
-                    className={`${Style.circulo} ${activeSection === 0 ? Style.active : ''}`} 
-                    onClick={() => scrollToSection(0)}
-                ></div>
-                <div 
-                    className={`${Style.circulo} ${activeSection === 1 ? Style.active : ''}`} 
-                    onClick={() => scrollToSection(1)}
-                ></div>
-                <div 
-                    className={`${Style.circulo} ${activeSection === 2 ? Style.active : ''}`} 
-                    onClick={() => scrollToSection(2)}
-                ></div>
             </aside>
             <section data-src="https://images.pexels.com/photos/992734/pexels-photo-992734.jpeg?auto=compress&cs=tinysrgb&w=4608&h=3072&dpr=1">
                 <div className={Style.titulo}>
@@ -90,7 +72,6 @@ const Home = () => {
             <section data-src="https://images.pexels.com/photos/6412836/pexels-photo-6412836.jpeg?auto=compress&cs=tinysrgb&w=3578&h=5367&dpr=1">
                 <h1 className={Style.titulo}></h1>
             </section>
-            <Footer />
         </>
     );
 };

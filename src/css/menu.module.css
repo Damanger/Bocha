@@ -3,3 +3,156 @@
     display: flex;
     flex-direction: column;
 }
+
+.circularSlider{
+    text-align: center;
+    overflow: hidden;
+    height: 40rem;
+    min-height: 100vh;
+    padding: 1rem 2rem 0 2rem;
+    position: relative;
+}
+
+.text h1{
+    font-size: 3rem;
+    margin-top: 8vh;
+}
+
+.text p{
+    max-width: 550px;
+    line-height: 30px;
+    margin: 0 auto;
+}
+
+.slider{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider .imagen{
+    width: 70vw;
+    height: 70vw;
+    max-width: 400px;
+    max-height: 400px;
+    background-image: url(https://images.pexels.com/photos/41953/earth-blue-planet-globe-planet-41953.jpeg?auto=compress&cs=tinysrgb&w=2048&h=2048&dpr=1);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 300ms;
+    border-radius: 50%;
+}
+
+.indicator{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;
+    height: 70vw;
+    max-width: 700px;
+    max-height: 700px;
+    border-radius: 50%;
+    transition: 300ms;
+}
+
+.indicator::before{
+    content: "";
+    position: absolute;
+    top: 0rem;
+    left: 50%;
+    transform: translate(-50%);
+    width: 1rem;
+    height: 1rem;
+    background-color: rgb(145, 150, 250);
+    border-radius: 50%;
+}
+
+.menu, .menu div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85vw;
+    height: 85vw;
+    max-width: 750px;
+    max-height: 750px;
+    border-radius: 50%;
+}
+
+.menu span{
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: 200ms;
+}
+
+.menu span:hover{
+    color: rgb(145, 150, 250);;
+}
+
+.menu div:nth-child(1){
+    transform: translate(-50%, -50%) rotate(-80deg);
+}
+
+.menu div:nth-child(2){
+    transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.menu div:nth-child(3){
+    transform: translate(-50%, -50%) rotate(-40deg);
+}
+
+.menu div:nth-child(4){
+    transform: translate(-50%, -50%) rotate(-20deg);
+}
+
+.menu div:nth-child(5){
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.menu div:nth-child(6){
+    transform: translate(-50%, -50%) rotate(20deg);
+}
+
+.menu div:nth-child(7){
+    transform: translate(-50%, -50%) rotate(40deg);
+}
+
+.menu div:nth-child(8){
+    transform: translate(-50%, -50%) rotate(60deg);
+}
+
+.menu div:nth-child(9){
+    transform: translate(-50%, -50%) rotate(80deg);
+}
+
+@media screen and (max-width: 1024px){
+    .slider{
+        top: 75%;
+    }
+}
+@media screen and (max-width: 768px){
+    .slider{
+        top: 70%;
+    }
+}
+@media screen and (max-width: 430px){
+    .slider{
+        top: 75%;
+    }
+    .slider .imagen{
+        width: 60vw;
+        height: 60vw;
+    }
+}
+@media screen and (max-width: 375px){
+    .menu span{
+        font-size: 1rem;
+    }
+}

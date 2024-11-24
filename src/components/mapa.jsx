@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Navbar from './navbar';
-import Footer from './footer';
 import L from 'leaflet';
 import 'leaflet-routing-machine';
 import 'leaflet/dist/leaflet.css';
@@ -145,12 +144,11 @@ const Mapa = () => {
                 <div className={Style.contenedorTitulo}>
                     <h1 className={Style.titulo}>BO·CHA Huajuapan</h1>
                 </div>
-                <div id="mi_mapa" style={{ width: '90%', height: '45vh', border: 'solid 2px #de7fb6', borderRadius:'10px', marginTop: '-8rem' }}></div>
-                <div style={{ textAlign: 'center', marginTop: '-8rem' }}>
+                <div id="mi_mapa" style={{ width: '90%', height: '45vh', border: 'solid 2px #de7fb6', borderRadius:'10px', marginTop: '-12rem' }}></div>
+                <div style={{ textAlign: 'center', marginTop: '-12rem' }}>
                     {buttonVisible && <button onClick={handleShareLocationClick} className={Style.botonMapa}>¿Cómo llegar? →</button>}
                 </div>
             </section>
-            <Footer />
         </>
     );
 }
