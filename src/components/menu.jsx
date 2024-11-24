@@ -7,8 +7,8 @@ const Menu = () => {
     const [animationClass, setAnimationClass] = useState('fadeInUp');
     const rotationValues = [-80, -60, -40, -20, 0, 20, 40, 60, 80];
     const images = [
-        "latte.webp", "latte.webp", "latte.webp", "latte.webp",
-        "latte.webp", "latte.webp", "latte.webp", "latte.webp", "latte.webp"
+        "latte2.webp", "taro.webp", "mix.webp", "latte2.webp",
+        "berries.webp", "mango.webp", "latte.webp", "latte2.webp", "latte2.webp"
     ];
     const descriptions = [
         "Choco Bocha - Nuestra tapioca + Choco Oaxaqueño Frappé + Milk foam",
